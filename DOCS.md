@@ -1,6 +1,6 @@
 # rsg-goldpanning — Developer & Server Owner Docs
 
-Version 3.1.0
+Version 3.2.0
 
 ## Contents
 1. Architecture
@@ -91,5 +91,10 @@ Nothing is saved. Sessions, cooldowns and spot memory are in memory and cleared 
 | No webhooks | Set `Config.Webhooks.enabled` and the URLs in `server/sv_config.lua` |
 
 ---
+
+## rsg-skills integration
+
+`Config.Skills = { Enabled, Skill, FindXP }`. After the server has paid out a find in the pan event, it calls `AddXP(src, 'mining', FindXP, 'gold panning')`. Change `Skill` to use another skill key. Skipped when rsg-skills is not started.
+
 
 Support the Project : https://rexshack.tebex.store/
